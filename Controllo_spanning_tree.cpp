@@ -46,7 +46,7 @@ int main()  {
 			iniziale[i][j]/=somma;
 		}
 	}
-	//calcoliamo la matrice con la probabilit‡ di accettazione
+	//calcoliamo la matrice con la probabilit√† di accettazione
 
 	for(int i=0;i<n;i++){
 		for(int j=0;j<n;j++){
