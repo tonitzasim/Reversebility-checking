@@ -2,84 +2,19 @@
 using namespace std;
 int main(){
 	int n;
-	double alfa;
 	cin>>n;
 	vector<int> adj[n];
 	double pesi[n][n];
 	vector<int> genitore(n,-1);
 	bool risultato=true;
 	queue<int> q;
-	
-	
-	
-	srand(time(0));
 	double somma=0;
-	double prob_zero= 1/ (double) 2;
-	double distribuzione[n];
-	double accetta[n][n], iniziale[n][n];
-
-
-
-for(int i=0;i<n;i++)
-	{
-		distribuzione[i]=rand()%100+1;
-		somma+=distribuzione[i];
-	}
-	
-		for(int i=0;i<n;i++)
-	{
-		distribuzione[i]/=double(somma);
-	}
-
-
-	//generiamo la matrice randomica iniziale
-
+	double alfa;
 	for(int i=0;i<n;i++){
-	somma=0;		
-		for(int j=0;j<n;j++){
-			if( rand()%100 / (double) 100 < prob_zero&&i!=((j-1)%n) && i!=((j+1)%n) ){
-				iniziale[i][j]=0;
-			}
-			else {
-			iniziale[i][j]=rand()%100+1;
-		somma+=iniziale[i][j];
-	}
+		for(int j=0;j<0;j++){
+			cin>>pesi[i][j];
 		}
-		for(int j=0;j<n;j++){
-			iniziale[i][j]/=somma;
-		}
-	}
-	//calcoliamo la matrice con la probabilità di accettazione
-	
-	for(int i=0;i<n;i++){
-		for(int j=0;j<n;j++){
-			
-			if(i==j || iniziale[i][j]==0|| iniziale[j][i]==0)
-				accetta[i][j]=0;
-			else {
-				accetta[i][j]= min((double) 1, ( distribuzione[j]*iniziale[j][i]/( distribuzione[i] * iniziale[i][j] ) ) );
-			}
-		}
-	}
-
-		//moltiplichiamo elemento per elemnto le due matrice e normalizziamo 
-	//gli elementi sulla diagonale
-	
-	for(int i=0;i<n;i++){
-		somma=0;
-		for(int j=0;j<n;j++)
-		{
-			pesi[i][j]=iniziale[i][j]*accetta[i][j];
-			somma+=pesi[i][j];
-			
-		}
-		pesi[i][i]-=somma-1;
-	}
-	
-//stampo la matrice di input	
-	
-
-	
+	}	
 	//costrisco le liste di adiacenze
 	
 	for(int i=0;i<n;i++){
@@ -102,7 +37,7 @@ for(int i=0;i<n;i++)
 		int curr=q.front();
 		q.pop();
 	
-	//controllo	se pesa di più l'arco tra il nodo attuale e il suo genitore
+	//controllo	se pesa di piÃ¹ l'arco tra il nodo attuale e il suo genitore
 	// o l'arco inverso
 		
 		if(pesi[curr] [genitore[curr] ] > pesi[genitore [curr] ] [curr]){
@@ -136,7 +71,7 @@ for(int i=0;i<n;i++)
 			}
 		}
 	}
-	//verifico se la matrice finale è simmetrica 
+	//verifico se la matrice finale Ã¨ simmetrica 
 	for(int i=0;i<n;i++){
 		for(int j=0;j<n;j++){
 			if(fabs(pesi[i][j] - pesi[j][i])> pow(10,-10)) {
@@ -147,3 +82,4 @@ for(int i=0;i<n;i++)
 	}
 	cout<<risultato;
 }
+
