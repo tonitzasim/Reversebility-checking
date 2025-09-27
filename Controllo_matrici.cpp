@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
+
+	//dichiarazioni iniziali e input
+	
 	int n;
 	cin>>n;
 	vector<int> adj[n];
@@ -10,11 +13,13 @@ int main(){
 	queue<int> q;
 	double somma=0;
 	double alfa;
+	
 	for(int i=0;i<n;i++){
-		for(int j=0;j<0;j++){
+		for(int j=0;j<n;j++){
 			cin>>pesi[i][j];
 		}
 	}	
+	
 	//costrisco le liste di adiacenze
 	
 	for(int i=0;i<n;i++){
@@ -82,4 +87,5 @@ int main(){
 	}
 	cout<<risultato;
 }
+
 
