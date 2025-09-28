@@ -70,6 +70,7 @@ int main(){
 	}
 	cout<<"Vuole vedere la matrice finale? ";
 	cin>>scelta;
+	cout<<endl;
 	for(int i=0;i<n;i++){
 		for(int j=0;j<n;j++)
 		{
@@ -84,9 +85,7 @@ int main(){
 		cout<<endl;
 		}
 	}
-	cout<<corretto;
+		if(corretto)
+	cout<<"corretto";
+	else cout<<"sbagliato";
 }
-
-
-
-
