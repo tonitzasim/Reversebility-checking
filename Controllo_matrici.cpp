@@ -88,8 +88,3 @@ int main(){
 	}
 	cout<<risultato;
 }
-
-
-
-
-
