@@ -5,7 +5,9 @@ int main(){
 	srand(time(0));
 	double somma=0;
 	double prob_zero= 1/ (double) 2;
+	cout<<"Inserisci il numero di stati: "
 	cin>>n;
+	cout<<endl;
 	double pesi[n][n];
 
 	for(int i=0;i<n;i++){
@@ -30,3 +32,4 @@ int main(){
 		cout<<endl;
 	}
 }
+
