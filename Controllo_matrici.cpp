@@ -14,7 +14,7 @@ int main(){
 	queue<int> q;
 	double somma=0;
 	double alfa;
-	
+	cout<<"Inserisci la matrice dei pesi: "
 	for(int i=0;i<n;i++){
 		for(int j=0;j<n;j++){
 			cin>>pesi[i][j];
@@ -88,6 +88,7 @@ int main(){
 	}
 	cout<<risultato;
 }
+
 
 
 
