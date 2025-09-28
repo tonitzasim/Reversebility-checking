@@ -17,7 +17,7 @@ int main()  {
 	cout<<"Inserisci la matrice con i pesi: ";
 	for(int i=0;i<n;i++){
 		for(int j=0;j<n;j++){
-			pesi[i][j];
+			cin>>pesi[i][j];
 		}
 	}
 	//costruiamo le liste di adiacenza
@@ -73,6 +73,7 @@ int main()  {
 
     return 0;
 }
+
 
 
 
