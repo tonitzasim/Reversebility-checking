@@ -4,7 +4,7 @@ int main(){
 
 	//dichiarazioni iniziali e input
 	int n;
-	cout<<"Inserisci numero di stati: "
+	cout<<"Inserisci numero di stati: ";
 	cin>>n;
 	cout<<endl;
 	vector<int> adj[n];
@@ -14,7 +14,7 @@ int main(){
 	queue<int> q;
 	double somma=0;
 	double alfa;
-	cout<<"Inserisci la matrice dei pesi: "
+	cout<<"Inserisci la matrice dei pesi: ";
 	for(int i=0;i<n;i++){
 		for(int j=0;j<n;j++){
 			cin>>pesi[i][j];
@@ -88,3 +88,4 @@ int main(){
 	}
 	cout<<risultato;
 }
+
