@@ -3,9 +3,10 @@ using namespace std;
 int main(){
 
 	//dichiarazioni iniziali e input
-	
 	int n;
+	cout<<"Inserisci numero di stati: 
 	cin>>n;
+	cout<<endl;
 	vector<int> adj[n];
 	double pesi[n][n];
 	vector<int> genitore(n,-1);
@@ -87,5 +88,6 @@ int main(){
 	}
 	cout<<risultato;
 }
+
 
 
