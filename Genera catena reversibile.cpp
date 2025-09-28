@@ -8,7 +8,7 @@ int main(){
 	srand(time(0));
 	double somma=0;
 	double prob_zero= 1/ (double) 2;
-	cout<<"Inserisci numero di stati: "
+	cout<<"Inserisci numero di stati: ";
 	cin>>n;
 	cout<<endl;
 	double distribuzione[n];
@@ -78,4 +78,5 @@ int main(){
 		cout<<endl;
 	}
 }
+
 
