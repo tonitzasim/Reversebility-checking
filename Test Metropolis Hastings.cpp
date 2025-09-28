@@ -27,7 +27,7 @@ int main(){
 	for(int i=0;i<n;i++){
 	somma=0;		
 		for(int j=0;j<n;j++){
-			if( rand()%100 / (double) 100 < prob_zero&&i!=((j-1)%n) && i!=((j+1)%n) ){
+			if( rand()%100 / (double) 100 < prob_zero&&i!=((j-1+n)%n) && i!=((j+1)%n) ){
 				iniziale[i][j]=0;
 			}
 			else {
@@ -45,7 +45,7 @@ int main(){
 	for(int i=0;i<n;i++){
 		for(int j=0;j<n;j++){
 			
-			if(i==j || pesi[i][j]==0|| pesi[j][i]==0)
+			if(i==j || iniziale[i][j]==0|| iniziale[j][i]==0)
 				accetta[i][j]=0;
 			else {
 				accetta[i][j]= min((double) 1, ( distribuzione[j]*iniziale[j][i]/( distribuzione[i] * iniziale[i][j] ) ) );
@@ -80,5 +80,6 @@ int main(){
 	}
 	cout<<corretto;
 }
+
 
 
