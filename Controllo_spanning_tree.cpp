@@ -5,7 +5,7 @@ int main()  {
 	//dichiarazioni iniziali e input
 	
 	int n;
-	cout<<"Inserisci il numero di stati: "
+	cout<<"Inserisci il numero di stati: ";
     cin>>n;
 	cout<<endl;
     double pesi [n][n];
@@ -73,6 +73,7 @@ int main()  {
 
     return 0;
 }
+
 
 
 
