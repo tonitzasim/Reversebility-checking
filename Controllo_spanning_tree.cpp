@@ -14,7 +14,7 @@ int main()  {
     vector<double> backwards(n,0);
     vector<double> forwards(n,0);
     queue<int> q; 
-	cout<<"Inserisci la matrice con i pesi: "
+	cout<<"Inserisci la matrice con i pesi: ";
 	for(int i=0;i<n;i++){
 		for(int j=0;j<n;j++){
 			pesi[i][j];
@@ -55,23 +55,24 @@ int main()  {
 
     //controlliamo la condizione di Kolmogorov sui cicli fondamntali
     
-	bool reversibile=true;
+	bool risultato=true;
     
     for(int i=1;i<n;i++){
     	if(visited[i]=false){
-    		reversibile=false;
+    		risultato=false;
 		}
  		for(int x : adj[i]){
  			if(fabs(forwards[i]*pesi[i][x]*backwards[x]-forwards[x]*pesi[x][i]*backwards[i])>pow(10,-10)){
- 				reversibile=false;
+ 				risultato=false;
 			 }
  			
 		 }   	
 	}
 	
-	cout<<reversibile;
+	cout<<risultato;
 
     return 0;
 }
+
 
 
