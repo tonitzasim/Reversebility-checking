@@ -11,6 +11,8 @@ int main(){
 	cout<<endl;
 	double distribuzione[n];
 	double pesi[n][n], accetta[n][n], iniziale[n][n];
+	bool corretto=true;
+	bool scelta;
 	
 	//generaimo una distribuzione all'equilibrio randomica
 	for(int i=0;i<n;i++)
@@ -66,20 +68,25 @@ int main(){
 		}
 		pesi[i][i]-=somma-1;
 	}
-	bool corretto=true;
-	
+	cout<<"Vuole vedere la matrice finale? ";
+	cin>>scelta;
 	for(int i=0;i<n;i++){
 		for(int j=0;j<n;j++)
 		{
+			if(scelta){
 			cout<<pesi[i][j]<<" ";
+			}
 			if(fabs(distribuzione[i]*pesi[i][j]-distribuzione[j]*pesi[j][i])>pow(10,10)){
 				corretto=false;
 			}
 		}
+		if(scelta){
 		cout<<endl;
+		}
 	}
 	cout<<corretto;
 }
+
 
 
 
