@@ -4,7 +4,7 @@ int main(){
 
 	//dichiarazioni iniziali e input
 	int n;
-	cout<<"Inserisci numero di stati: 
+	cout<<"Inserisci numero di stati: "
 	cin>>n;
 	cout<<endl;
 	vector<int> adj[n];
@@ -88,6 +88,7 @@ int main(){
 	}
 	cout<<risultato;
 }
+
 
 
 
