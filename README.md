@@ -1,4 +1,4 @@
-## Reversibilità delle catene di Markov
+# Reversibilità delle catene di Markov
 In questa repository sono presenti:
 - 2 codici per la generazione delle matrici di catene (reversibili e no)
 - l'implementazione dell'algoritmo con le matrici
@@ -10,6 +10,7 @@ I due codici che generano le matrici prendono in input solo la dimensione voluta
 I codici che implementano i due algoritmi chiedono in input la dimensione della matrice e la matrice che si vuole verificare.
 In output stampano entrambi un valore booleano: vero se la catena è reversibile e falso altrimenti.
 
-# Testing
+## Testing
 
-Per il testing dei codici, abbiamo prima implementato un codice che verifica la correttezza dell'algoritmo di Metropolis-Hastings 
+Per il testing dei codici, abbiamo prima implementato un codice che verifica la correttezza dell'algoritmo di Metropolis-Hastings, verificando se le matrici che genera sono reversibili
+utilizzando le equazioni dettagliate del bilancio avendo anche generato una distribuzione all'equilibrio. Il codice di testing prende in input la dimensione di matrice 
