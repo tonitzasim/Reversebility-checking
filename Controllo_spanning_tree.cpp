@@ -5,14 +5,16 @@ int main()  {
 	//dichiarazioni iniziali e input
 	
 	int n;
+	cout<<"Inserisci il numero di stati: "
     cin>>n;
+	cout<<endl;
     double pesi [n][n];
     vector<int> adj[n];
     vector<bool> visited(n,false);
     vector<double> backwards(n,0);
     vector<double> forwards(n,0);
     queue<int> q; 
-
+	cout<<"Inserisci la matrice con i pesi: "
 	for(int i=0;i<n;i++){
 		for(int j=0;j<n;j++){
 			pesi[i][j];
@@ -68,7 +70,8 @@ int main()  {
 	}
 	
 	cout<<reversibile;
-	
+
     return 0;
 }
+
 
